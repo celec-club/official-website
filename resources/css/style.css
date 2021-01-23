@@ -1,0 +1,459 @@
+body {
+    background-image: url(../images/forum/formpage.svg);
+    background-size: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+/*nav bar*/
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background-color: #0088FF;
+    
+  } 
+  nav .logo{
+    float: left;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px;
+    
+  }
+  nav .linkes{
+    float: right;
+    padding-top: 10px;
+    display: flex;
+    margin-top:15px;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Montserrat ',sans-serif;
+  
+  }
+  nav .linkes li{
+  list-style: none;
+  }
+      nav ul  a:hover{
+        background-color: rgba(215, 241, 253, 0.06); 
+        border-radius: 20px;
+        transition: .5s;
+        text-decoration: none;
+        color: white;
+      }
+  nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+  
+  }
+      nav .linkes li{
+      display: block;
+      padding: 0.3em ;
+      color: white;
+  
+      }
+      #nav-toggle{
+        top: -100px;;
+        position: absolute;
+      }
+      nav .icon-barger{
+        transform: translateY(-50%);
+        display: none;
+        position: absolute;
+      right: 5%;
+      top: 50%;
+      }
+      nav .icon-barger .line{
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin: 5px;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+  
+      }
+      @media screen and (max-width: 768px){
+    nav .linkes{
+      float: none;
+      position: fixed;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      top: 100px;
+      bottom: 0;    
+  
+    }
+    nav .linkes{
+      float: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -10%;
+      bottom: 100%;  
+      flex-direction: column;  
+        background-image: url(../images/bg5.svg); 
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      transition: all .5s ease-in-out;
+  
+    }
+    .dropbtn{
+      background-color: transparent;
+    }
+    
+    nav .linkes a{
+      font-size: 18px ;
+  
+    }
+    nav .logo{
+      float: none;
+      width: auto;
+      justify-content: right;
+    }
+    nav .icon-barger {
+      display: block;
+    }
+    nav :checked ~ .icon-barger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+  
+    }
+    nav :checked ~ .icon-barger .line:nth-child(2) {
+  opacity: 0;
+    }
+    
+    nav :checked ~ .icon-barger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+  
+    }
+    nav :checked ~ .linkes{
+      bottom: 0;
+    }
+  
+  }
+  /*dropdown*/
+  .dropbtn {
+    background-color: transparent;
+    color:white;
+    padding: 10px;
+    font-size: 18px;
+    font-family:'Montserrat ',sans-serif;
+    border: none;
+    cursor: pointer;
+   }
+   .dropbtn:hover{
+       background-color: rgba(129, 210, 248, 0.226);
+       border-radius: 20px;
+        transition: .5s;
+   }
+   
+   .dropdown {
+     position: relative;
+     display: inline-block;
+   }
+   
+   .dropdown-content {
+     
+     display: none;
+     position: absolute;
+     background-color: white;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+   
+   .dropdown-content a {
+     color: rgb(42, 44, 73);
+     transition: .5s;
+     padding: 10px 14px;
+     text-decoration: none;
+     display: block;
+   }
+   
+   .dropdown-content a:hover {background-color: rgba(158, 220, 248, 0.493);
+     color: rgb(42, 44, 73);
+   }
+   
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+   
+/*pre-inscriotion form*/
+.hero-text {
+    text-align: center;
+    margin-top: 75px;
+    padding: 0px 300px;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 5%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/*form*/
+.form{
+    margin-left: 10%;
+
+}
+.style {
+    display: block;
+    width: 40%;
+    padding: 0.8rem;
+    border-radius: 7px;
+    background-color: #8AC8FF;
+    color: #546D83;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+}
+
+label, .form-container p {
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+}
+.level p, .skills p{
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+
+}
+
+.level label {
+    margin-left: 60px;
+    font-size: 19px;
+    line-height: 60px;
+}
+
+.option {
+    position: relative;
+}
+
+.option label {
+    cursor: pointer;
+    font-weight: 440;
+}
+
+.option input {
+    display: none;
+}
+
+.option label::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #88d9ff;
+    border-radius: 50%;
+}
+
+.option label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2.65%;
+    width: 8px;
+    height: 8px;
+    background-color: #88d9ff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.option input:checked ~ label::before {
+    opacity: 1;
+}
+
+.skills label {
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__box {
+    width: 1em;
+    height: 1em;
+    border: 3px solid white;
+    opacity: 60%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 20px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.checkbox__box::after {
+    content: '\2714';
+    color: #0088FF;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.checkbox__input:checked + .checkbox__box {
+    background: white;
+    border-color: white;
+}
+
+.checkbox__input:checked + .checkbox__box::after {
+    transform: scale(1);
+}
+
+#custom-button {
+    width: 20%;
+    padding: 0.8rem;
+    border-radius: 7px;
+    background-color: #8AC8FF;
+    color: #546D83;
+    opacity: 90%;
+    border: none;
+    font-size: 19px;
+    outline: none;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#custom-button:hover {
+    background-color: #b8deff;
+}
+
+#custom-text {
+    margin-left: 10px;
+    color: white;
+}
+
+.CV p {
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.B1, .B2 {
+    width: 20%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #E0C3FC 0%, #8EC5FC 100%);
+    color:#0088FF;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    margin: 40px 20px 40px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.294);
+}
+
+.B1:hover, .B2:hover{
+    background: #8dcaff;
+}
+
+.p1 {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.p2 {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: #66B7FF;
+}
+/*footer*/
+footer {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*responsive*/
+@media (max-width: 500px) {
+    .logo{
+        width: 20%;
+        margin-left: -50px;
+        margin-top: -15px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    .hero-text {
+        margin-left: -250px;
+        margin-right: -50%;
+    }
+    .form{
+        margin-left: 10%;
+        
+    }
+    .style {
+        width: 80%;
+    }
+    .B1, .B2 {
+        width: 40%;
+        
+    }
+    #custom-button {
+        width: 35%;
+} }

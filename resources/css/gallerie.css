@@ -1,0 +1,471 @@
+/*body*/
+body {
+    margin: 0;
+    padding: 0;
+    
+    color: #FFFFFF;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    
+  }
+ .background{
+  height: 100vh;
+  background-size: cover; 
+  background-position: center;
+ }
+   
+  body header {
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 48px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 90;
+  }
+ 
+  
+  body section.slideshow {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  body section.slideshow ul.navigation {
+    position: absolute;
+    display: block;
+    width: 620px;
+    height: 620px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-left: -27%;
+    top: 50%;
+    margin-top: -320px;
+    z-index: 10;
+  }
+  
+  body section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: border 0.6s ease-in-out;
+  }
+  
+  body section.slideshow ul.navigation li.navigation-item .rotate-holder {
+    position: fixed;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -999px;
+    top: -9999px;
+  }
+  body section.slideshow ul.navigation li.navigation-item .background-holder {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    background-size: cover;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  }
+  body section.slideshow ul.navigation li.navigation-item:hover .background-holder {
+    opacity: 0.75;
+  }
+  body section.slideshow ul.navigation li.navigation-item.active .background-holder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  body section.slideshow .detail {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+  }
+  body section.slideshow .detail .detail-item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  body section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 480px);
+    height: 126px;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  /* content of slide */
+  .P1{
+    width: 470px; 
+    text-align: center; 
+    font-size: 21px;
+  }
+  .ecriture{
+    float: right; 
+    padding-right: 40%;
+    padding-top: 20%; 
+    text-align: center; 
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  .content {
+    position: absolute;
+    display: block;
+    width: 1000px;
+    float: right;
+    transform: translateX(60%);
+
+    text-align: center;
+    border-right:solid 2px white;
+    opacity: 90%;
+    z-index: 2;
+  } 
+  body section.slideshow .detail .detail-item .headline .letter {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 110px;
+    font-weight: 600;
+    font-kerning: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-transform: uppercase;
+  }
+  
+  body section.slideshow .detail .detail-item .background {
+    position: absolute;
+    display: block;
+    width: 100%;
+    width: calc(100% + 100px);
+    height: 100%;
+    height: calc(100% + 100px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-position: center center;     
+    background-size: cover;
+    z-index: 1;
+  }
+  body section.slideshow .detail .detail-item .background::before {
+    content: ""; 
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 180%);   
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+      
+  }
+  body section.slideshow .detail .detail-item.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  /*Right Line*/
+  .line{
+    position: absolute;
+    display: block;
+    height: 480px;
+    width: 4px;
+    float: right;
+    margin-left: 65%;
+    margin-top: 6%;
+    background-color: #ffffff;
+    z-index: 2;
+    }
+ 
+  /* Home Return */
+  .navbar i{
+    color: white;
+    margin-right: 60px;
+    margin-top: 20px;
+    opacity: 80%;
+  }
+  .navbar i:hover{
+    opacity: 100%;
+    transition: .5s ease-in-out
+  }
+  /*nav reseaux*/
+  .rs{
+    background-color: transparent; 
+    margin-right: 30px;
+    margin-bottom: 10px;
+    opacity: 100%;
+  }
+  @media (max-width: 500px) {
+    .rs{
+      background-color: transparent; 
+      margin-right: 0px;
+      margin-bottom: 10px;
+      opacity: 100%;
+      padding: 0;
+      margin-left: 2.5%;
+    }
+    body section.slideshow ul.navigation li.navigation-item { /* les petite circle */
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: border 0.6s ease-in-out;
+    }
+    body section.slideshow ul.navigation { /*le circle kbira*/
+      position: absolute;
+      display: block;
+      width: 410px; /*wid et hi pour le circle hadake*/
+      height: 410px;
+      padding: 0;
+      margin: 0;
+      float: left;
+      margin-left: 3%; /*hadi tna9asse fl wste bzf*/
+      top: 18%;
+      margin-top: -320px;
+      z-index: 10;
+      transform: rotate(90deg);
+    }
+    body section.slideshow .detail .detail-item .background {
+      position: absolute;
+      display: block;
+      width: 80%;
+      width: calc(80% + 100px);
+      height: 100%;
+      height: calc(100% + 100px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: visible;
+      background-repeat: no-repeat;
+      background-position: center center;     
+      background-size: contain;
+      z-index: 1;
+    }
+    body section.slideshow .detail .detail-item .background::before {
+      content: ""; 
+      background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 180%);   
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+        
+    }
+    body section.slideshow .detail .detail-item .headline {
+      position: absolute;
+      display: block;
+      width:100%;
+      max-width: calc(100% - 480px);
+      height: 126px;
+      top: 35%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      overflow: visible;
+      white-space: nowrap;
+      box-sizing: border-box;
+      z-index: 2;
+      font-size: 25px;
+    }
+    body section.slideshow .detail .detail-item .headline .letter {
+      font-family: 'Oswald', sans-serif;
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      visibility: hidden;
+      color: #FFFFFF;
+      font-size: 30px;
+      line-height: 110px;
+      font-weight: 600;
+      font-kerning: none;
+      white-space: nowrap;
+      box-sizing: border-box;
+      text-transform: uppercase;
+    }
+    .ecriture{
+      padding-right: 120%;
+      padding-top: 28%; 
+      text-align: center; 
+      font-family: sans-serif;
+      font-weight: 600;
+    }
+    .P1{
+      width: 370px; 
+      text-align: center; 
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 375px) {
+    .rs{
+      background-color: transparent; 
+      margin-right: 0px;
+      margin-bottom: 10px;
+      opacity: 100%;
+      padding: 0;
+      margin-left: 2.5%;
+      margin: auto;
+    }
+    body section.slideshow ul.navigation li.navigation-item { /* les petite circle */
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: border 0.6s ease-in-out;
+    }
+    body section.slideshow ul.navigation { /*le circle kbira*/
+      position: absolute;
+      display: block;
+      width: 410px; /*wid et hi pour le circle hadake*/
+      height: 410px;
+      padding: 0;
+      margin: 0;
+      float: left;
+      margin-left: 0%; /*hadi tna9asse fl wste bzf*/
+      top: 10%;
+      margin-top: -320px;
+      z-index: 10;
+      transform: rotate(90deg);
+      /*transform: rotate(-90deg);*/
+    }
+    body section.slideshow .detail .detail-item .background {
+      position: absolute;
+      display: block;
+      width: 80%;
+      width: calc(80% + 100px);
+      height: 100%;
+      height: calc(100% + 100px);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: visible;
+      background-repeat: no-repeat;
+      background-position: center center;     
+      background-size: contain;
+      z-index: 1;
+    }
+    body section.slideshow .detail .detail-item .background::before {
+      content: ""; 
+      background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 180%);   
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+        
+    }
+    body section.slideshow .detail .detail-item .headline {
+      position: absolute;
+      display: block;
+      width:100%;
+      max-width: calc(100% - 480px);
+      height: 126px;
+      top: 32%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      overflow: visible;
+      white-space: nowrap;
+      box-sizing: border-box;
+      z-index: 2;
+      font-size: 25px;
+    }
+    body section.slideshow .detail .detail-item .headline .letter {
+      font-family: 'Oswald', sans-serif;
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      visibility: hidden;
+      color: #FFFFFF;
+      font-size: 30px;
+      line-height: 110px;
+      font-weight: 600;
+      font-kerning: none;
+      white-space: nowrap;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      margin: auto;
+    }
+    .ecriture{
+      padding-right: 122.5%;
+      padding-top: 30%; 
+      text-align: center; 
+      font-family: sans-serif;
+      font-weight: 600;
+      margin: auto;
+    }
+    
+    .P1{
+      width: 370px; 
+      text-align: center; 
+      font-size: 18px;
+      margin: auto;
+    }
+  }
