@@ -9,6 +9,7 @@
     @if(Request::is('register'))
         <link rel="stylesheet" href="{{url('resources/css/style.css')}}">
     @elseif(Request::is('formation'))
+
       <link rel="stylesheet" href="{{url('resources/css/formation.css')}}">
     @elseif(Request::is('events'))
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -21,7 +22,8 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/27e5e9f5bc.js" ></script>
     @elseif(Request::is("gallerie"))
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{url('resources/css/gallerie.css')}}">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
