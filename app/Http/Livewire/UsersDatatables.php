@@ -42,7 +42,7 @@ class UsersDatatables extends LivewireDatatable {
 			// Column::name('cvs.path')
 			// 	->label("CV")
 			// 	->linkTo("celec-site/storage/app"),
-            Column::name("cv.path")->label("cv")->linkTo("celec-site/storage/app"),
+            Column::name("cv.path")->label("cv")->linkTo("storage/app"),
 			Column::callback(['id', 'activated', "have_card"], function ($id, $activated, $have_card) {
                 return view('livewire.users-accept', ['id' => $id, 'activated' => $activated, "have_card" => $have_card]);
             })->label("Actions"),
