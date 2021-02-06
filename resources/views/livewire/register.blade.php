@@ -186,7 +186,11 @@
                 <div class="invalid-feedback" wire:loading wire:target="cv">Uploading...</div>
                 @error('cv') <div class="invalid-feedback" style="color:red; margin-bottom: 3%;">{{ $message }}</div> @enderror
             </div>
-
+            @if ($errors->any())
+                <div class="alert alert-danger" style="color:red; margin-top 5%; border-left:2px solid red; padding-left:0.5%;">
+                    <strong>Oups! il y a des entrées qui ne devraient pas être vides</strong>
+                </div>
+            @endif
             <button class="B1" type="submit" wire:target="submit" wire:loading.remove>Submit</button>
             <button class="B2" type="reset" wire:target="submit" wire:loading.remove>Reset</button>
             <div wire:loading wire:target="submit" style="margin-top: 5%;">
